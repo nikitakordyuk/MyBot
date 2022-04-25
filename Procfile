@@ -1,1 +1,1 @@
-web: java -java src/main/TelegramBotApp.java
+web: java -jar out/artifacts/MyBot_jar/MyBot.jar

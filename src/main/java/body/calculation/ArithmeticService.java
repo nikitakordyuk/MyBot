@@ -65,15 +65,20 @@ public class ArithmeticService {
         //количество строк, вмещающихся на одну страницу А4 в горизонтальной ориентации при выбранных размере и
         //типе шрифта (см. метод setRunParameters класса WordFileProcessorImpl)
         int linesCount = 52;
-        return switch (operationsCount) {
-            case 1 -> linesCount;
-            case 2 -> linesCount / 2;
-            case 3 -> linesCount / 3;
-            case 4 -> linesCount / 4;
-            default -> throw new IllegalArgumentException(String.format(Utils.convert("Недопустимое количество " +
-                    "операций для формирования " +
-                    "файла с заданиями - %s"), operationsCount));
-        };
+        switch (operationsCount) {
+            case 1:
+                return linesCount;
+            case 2:
+                return linesCount / 2;
+            case 3:
+                return linesCount / 3;
+            case 4:
+                return linesCount / 4;
+            default:
+                throw new IllegalArgumentException(String.format(Utils.convert("Недопустимое количество " +
+                        "операций для формирования " +
+                        "файла с заданиями - %s"), operationsCount));
+        }
     }
 
     /**

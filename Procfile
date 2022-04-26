@@ -1,1 +1,1 @@
-worker: java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -jar out/artifacts/MyBot_jar/MyBot.jar
+worker: java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 build/classes/java/main/body/TelegramBotApp

@@ -19,10 +19,9 @@ public class WordFileProcessorImpl {
      * @param taskList список заданий
      */
     public FileInputStream createWordFile(List<String> taskList) throws IOException {
-        Path path = Paths.get("Template.docx").toAbsolutePath();
         //Формирование документа на основе шаблона - файла .docx из папки resources
         XWPFDocument doc = new XWPFDocument(getClass().getClassLoader()
-                .getResourceAsStream("Template.txt"));
+                .getResourceAsStream("Template.docx"));
         System.out.println(doc);
         setTaskListToXWPFDocument(doc, taskList);
         return createTempFile(doc);

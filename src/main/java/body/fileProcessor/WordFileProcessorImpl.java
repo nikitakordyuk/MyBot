@@ -19,7 +19,7 @@ public class WordFileProcessorImpl {
     public FileInputStream createWordFile(List<String> taskList) throws IOException {
         //Формирование документа на основе шаблона - файла .docx из папки resources
         XWPFDocument doc = new XWPFDocument(getClass().getClassLoader()
-                .getResourceAsStream("Template.docx"));
+                .getResourceAsStream("C:\\Users\\tto3u\\IdeaProjects\\Java_Online_5\\MyBot\\out\\artifacts\\MyBot_jar"));
         setTaskListToXWPFDocument(doc, taskList);
         return createTempFile(doc);
     }

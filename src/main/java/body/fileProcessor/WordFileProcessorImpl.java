@@ -22,7 +22,7 @@ public class WordFileProcessorImpl {
         Path path = Paths.get("Template.docx").toAbsolutePath();
         //Формирование документа на основе шаблона - файла .docx из папки resources
         XWPFDocument doc = new XWPFDocument(getClass().getClassLoader()
-                .getResourceAsStream("Template.docx"));
+                .getResourceAsStream("Template.txt"));
         System.out.println(doc);
         setTaskListToXWPFDocument(doc, taskList);
         return createTempFile(doc);

@@ -1,0 +1,1 @@
+web: java -jar out/artifacts/MyBot_jar/MyBot.jar

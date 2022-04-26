@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,9 +19,11 @@ public class WordFileProcessorImpl {
      * @param taskList список заданий
      */
     public FileInputStream createWordFile(List<String> taskList) throws IOException {
+        Path path = Paths.get("Template.docx").toAbsolutePath();
         //Формирование документа на основе шаблона - файла .docx из папки resources
         XWPFDocument doc = new XWPFDocument(getClass().getClassLoader()
-                .getResourceAsStream("C:\\Users\\tto3u\\IdeaProjects\\Java_Online_5\\MyBot\\out\\artifacts\\MyBot_jar"));
+                .getResourceAsStream("Template.docx"));
+        System.out.println(doc);
         setTaskListToXWPFDocument(doc, taskList);
         return createTempFile(doc);
     }

@@ -1,1 +1,1 @@
-web: java -jar build/libs/MyBot_1.jar
+web: java -jar "C:\Users\tto3u\IdeaProjects\Java_Online_5\MyBot\build\libs\MyBotFull.jar"

@@ -1,1 +1,1 @@
-web: java -jar build/libs/MyBot
+web: java -jar build/libs/MyBot_1.jar

@@ -1,1 +1,1 @@
-worker: java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -cp ./build/classes/java/main/body/TelegramBotApp
+web: java -jar build/libs/MyBot-1.0-SNAPSHOT-all.jar

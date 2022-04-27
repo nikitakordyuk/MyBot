@@ -1,1 +1,1 @@
-web: java -Dfile.encoding=UTF-8 -jar MyBotFull.jar
+web: java -Dfile.encoding=UTF-8 -jar MyBotFull.jar 

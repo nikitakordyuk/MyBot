@@ -1,9 +1,25 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
+    }
+}
+
 plugins {
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'java'
 }
 
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+
 group 'org.example'
 version '1.0-SNAPSHOT'
+
 
 repositories {
     mavenCentral()
@@ -32,6 +48,11 @@ dependencies {
 
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'body.TelegramBotApp'
+    }
+}
 test {
     useJUnitPlatform()
 }

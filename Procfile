@@ -1,1 +1,1 @@
-web: java -jar MyBotFull.jar
+web: java -jar build/libs/MyBotFull.jar
